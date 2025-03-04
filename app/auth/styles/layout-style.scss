@@ -1,0 +1,34 @@
+@import '@styles/utils.scss';
+
+.title-primary{
+    @extend .title-primary;
+    text-align: center;
+}
+
+.title-secoundary{
+    @extend .title-secoundary;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.auth-page{
+    @extend .global-styles;
+    @include border(0rem, solid, white);
+    @include display-flex($flex-direction: row, $flex-wrap: nowrap, $justify-content: center, $align-items: center);
+    width: 100%;
+    min-height: 85vh;
+    @include spacing(2rem, 0rem);
+
+    .auth-page-box{
+        @extend .global-styles;
+        @include display-flex($flex-direction: column, $flex-wrap: nowrap, $justify-content: center, $align-items: center);
+        width: 60%;
+
+        img{
+            max-width: 50rem;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+@import '@styles/utils.scss';
+
+.container{
+    @extend .global-styles;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container-top{
+    background: $green-one-color;
+    @extend .global-styles;
+    width: 100%;
+    min-height: 15vh;
+}
+
+.container-bottom{
+    background: $gray-two-color;
+    @extend .global-styles;
+    width: 100%;
+    min-height: 85vh;
+    @include display-flex;
+}
+
+.container-bottom-child{
+    @extend .global-styles;
+    @include transform-translate(0, -10rem);
+    @include border(0rem, white, solid);
+    @include shadow;
+    background: $gray-one-color;
+    width: 85%;
+    margin: 0 auto;
+    min-height: 90vh;
+}
