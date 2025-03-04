@@ -286,7 +286,7 @@ export default function RegisterPage() {
                 <button type='submit' ref={buttonRegister}>
                     {etapasForm === 1 ? 'Próxima Etapa' : 'Criar Conta'}
                 </button>
-                <span className='loader'></span>
+                <span ref={loader} className='loader'></span>
             </div>
             <ErrorAuth errors={errors} type='lenErrors'/>
             <ErrorAuth errors={errors} type="system"/>
