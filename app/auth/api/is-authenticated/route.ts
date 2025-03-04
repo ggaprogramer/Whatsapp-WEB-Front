@@ -3,7 +3,6 @@ import { cookies } from 'next/headers';
 
 export async function POST(request: NextRequest) {
   const authToken = cookies().get('auth-token');
-  console.log(request);
 
   if (!authToken) {
       return new Response(null, { status: 400 });
@@ -29,7 +28,6 @@ async function isAuthenticated(token: string){
         body: JSON.stringify({token: token})
     });
     const isAuthenticated = response.ok;
-    console.log(response.ok, response.status);
     if(isAuthenticated) return true;
     return false;
 }

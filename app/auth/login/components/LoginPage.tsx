@@ -126,10 +126,6 @@ export default function LoginPage() {
         if(errors.length === 0) makeLogin();
     };
 
-    console.log('renderizou');
-    console.log('errors: ', errors);
-    console.log('formInputs: ', formInputs);
-
     return (
         <form onSubmit={handleSubmit} ref={formLogin} className='login-page-box login-page-form auth-form'>
             <h2 className='title-secoundary title-auth'>

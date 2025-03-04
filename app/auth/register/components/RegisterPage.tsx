@@ -56,11 +56,6 @@ export default function RegisterPage() {
 
     const [viewPassword, setViewPassword] = useState<Boolean>(false);
 
-    console.log('renderizou');
-    //console.log('errors: ', errors);
-    console.log('etapasForm: ', etapasForm)
-    console.log('formInputs: ', formInputs);
-
     const makeRegister = async () => {
         try{
             const body: bodyRequestRegisterForm = {
